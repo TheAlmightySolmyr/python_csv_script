@@ -1,0 +1,4 @@
+name,position,completed_tasks,performance,skills,team,experience_years
+David Bowie,Frontend Developer,33,7.0,"Swift, Kotlin, React Native, iOS",Mobile Team,10
+Chris Wilson,Backend Developer,22,3.5,"Docker, Jenkins, GitLab CI, AWS",Infrastructure Team,5
+Olga Kuznetsova,DevOps Engineer,11,1.75,"Vue.js, JavaScript, Webpack, Sass",Web Team,2.5
