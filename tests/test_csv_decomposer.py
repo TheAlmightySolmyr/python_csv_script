@@ -1,6 +1,8 @@
-import pytest
 import csv
 from unittest.mock import mock_open, patch
+
+import pytest
+
 from csv_script.csv_decomposer import read_csv
 
 

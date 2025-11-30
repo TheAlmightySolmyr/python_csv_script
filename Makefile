@@ -11,4 +11,4 @@ test:
 	uv run pytest
 
 coverage:
-	uv run pytest --cov=csv_script --cov-report=term-missing tests/
+	uv run pytest --cov=csv_script --cov-report=term-missing

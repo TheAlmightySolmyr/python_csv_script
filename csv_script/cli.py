@@ -1,11 +1,13 @@
 import argparse
 import os
+
 from tabulate import tabulate
 
 from csv_script.csv_decomposer import read_csv
 from csv_script.report_generator.generator import ReportGenerator
 
 CHOICES = ['performance']
+
 
 def validate_files(file_paths):
     for file_path in file_paths:
@@ -14,6 +16,7 @@ def validate_files(file_paths):
         if not os.path.isfile(file_path):
             raise ValueError(f"'{file_path}' is not a file")
     return True
+
 
 def cli_main():
     parser = argparse.ArgumentParser(description='Report generator')

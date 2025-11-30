@@ -1,4 +1,5 @@
 import pytest
+
 from csv_script.report_generator.generator import ReportGenerator
 
 

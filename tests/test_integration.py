@@ -1,4 +1,3 @@
-import pytest
 from csv_script.csv_decomposer import read_csv
 from csv_script.report_generator.generator import ReportGenerator
 
