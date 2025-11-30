@@ -1,5 +1,10 @@
 import argparse
 
+from tabulate import tabulate
+
+from csv_script.csv_decomposer import read_csv
+from csv_script.report_generator.generator import ReportGenerator
+
 CHOICES = ['performance']
 
 
@@ -11,5 +16,8 @@ def cli_main():
                         choices=CHOICES,
                         help='metric of the report')
     args = parser.parse_args()
+    read = read_csv(args.files)
+    report = ReportGenerator(read).choose_rep_type(args.report)
+    print(tabulate(report, headers='keys', showindex=range(1, len(report) + 1)))
 
-    return args
+    
