@@ -11,7 +11,8 @@ class ReportGenerator():
             method = getattr(self, method_name)
             return method()
         else:
-            raise ValueError(f'Unknown report type {report_type}. Available {list(available_reports.keys())}')
+            raise ValueError(f'''Unknown report type {report_type}. 
+                             Available {list(available_reports.keys())}''')
 
     def get_perfomance_report(self):
         position_data = {}
