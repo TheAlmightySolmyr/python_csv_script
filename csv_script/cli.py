@@ -30,6 +30,7 @@ def cli_main():
     validate_files(args.files)
     read = read_csv(args.files)
     report = ReportGenerator(read).choose_rep_type(args.report)
-    print(tabulate(report, headers='keys', showindex=range(1, len(report) + 1)))
+    print(tabulate(report, headers='keys', tablefmt='grid', 
+                   showindex=range(1, len(report) + 1)))
 
     
