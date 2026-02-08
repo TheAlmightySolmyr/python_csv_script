@@ -4,7 +4,8 @@ class ReportGenerator():
         self.data = data
 
     def choose_rep_type(self, report_type):
-        available_reports = {'performance': 'get_performance_report'}
+        available_reports = {'performance': 'get_performance_report',
+                             'gdp': 'get_gdp_report'}
 
         if report_type in available_reports:
             method_name = available_reports[report_type]
@@ -31,5 +32,25 @@ class ReportGenerator():
             average_performance = sum(performances) / len(performances)
             result.append({'position': position, 
                            'average_performance': average_performance})
+        
+        return result
+    
+    def get_gdp_report(self):
+        gdp_data = {}
+
+        for row in self.data:
+            country = row['country']
+            gdp = float(row['gdp'])
+            
+            if country not in gdp_data:
+                gdp_data[country] = []
+            gdp_data[country].append(gdp)
+
+        result = []
+
+        for country, gdp in gdp_data.items():
+            average_performance = sum(gdp) / len(gdp)
+            result.append({'country': country, 
+                           'gdp': average_performance})
         
         return result

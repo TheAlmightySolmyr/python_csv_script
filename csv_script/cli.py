@@ -6,7 +6,8 @@ from tabulate import tabulate
 from csv_script.csv_decomposer import read_csv
 from csv_script.report_generator.generator import ReportGenerator
 
-CHOICES = ['performance']
+CHOICES = ['performance',
+           'gdp']
 
 
 def validate_files(file_paths):
