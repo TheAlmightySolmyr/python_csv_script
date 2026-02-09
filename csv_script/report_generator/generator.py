@@ -5,7 +5,7 @@ class ReportGenerator():
 
     def choose_rep_type(self, report_type):
         available_reports = {'performance': 'get_performance_report',
-                             'gdp': 'get_gdp_report'}
+                             'average-gdp': 'get_gdp_report'}
 
         if report_type in available_reports:
             method_name = available_reports[report_type]
@@ -51,10 +51,10 @@ class ReportGenerator():
         result = []
 
         for country, gdp in gdp_data.items():
-            average_performance = sum(gdp) / len(gdp)
+            average_gdp = sum(gdp) / len(gdp)
             result.append({'country': country, 
-                           'gdp': average_performance})
+                           'average-gdp': average_gdp})
         
-        result.sort(key=lambda x: x['gdp'], reverse=True)
+        result.sort(key=lambda x: x['average-gdp'], reverse=True)
         
         return result
