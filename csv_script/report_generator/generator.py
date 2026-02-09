@@ -32,6 +32,8 @@ class ReportGenerator():
             average_performance = sum(performances) / len(performances)
             result.append({'position': position, 
                            'average_performance': average_performance})
+            
+        result.sort(key=lambda x: x['average_performance'], reverse=True)
         
         return result
     
@@ -52,5 +54,7 @@ class ReportGenerator():
             average_performance = sum(gdp) / len(gdp)
             result.append({'country': country, 
                            'gdp': average_performance})
+        
+        result.sort(key=lambda x: x['gdp'], reverse=True)
         
         return result

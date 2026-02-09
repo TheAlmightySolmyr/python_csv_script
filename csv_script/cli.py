@@ -31,6 +31,6 @@ def cli_main():
     read = read_csv(args.files)
     report = ReportGenerator(read).choose_rep_type(args.report)
     print(tabulate(report, headers='keys', tablefmt='grid', 
-                   showindex=range(1, len(report) + 1)))
+                   showindex=range(1, len(report) + 1), floatfmt='.2f'))
 
     
