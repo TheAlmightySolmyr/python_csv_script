@@ -1,14 +1,14 @@
 # python_csv_script
-Скрипт для анализа CSV файлов с данными о сотрудниках и генерации отчетов.
+Скрипт для анализа CSV файлов и генерации отчетов.
 
 # Установка:
 make install
 
 # Запуск 1 файла:
-uv run main.py --files data.csv --report performance
+uv run main.py --files data.csv --report *name*
 
 # Запуск 2 и более файлов:
-uv run main.py --files data.csv data2.csv data3.csv --report performance
+uv run main.py --files data.csv data2.csv data3.csv --report *name*
 
 # Возможности расширения:
 1. В файл csv_script/cli.py в константу CHOICES добавить название отчета в строчном формате.
